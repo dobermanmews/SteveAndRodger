@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<travels>
+<title>Wales/Iceland '14</title>
+<flag>Wales.png</flag>
+<flag_right>Iceland.png</flag_right>
+<headertext>
+We spent eight days in Wales, three in London and five in Iceland.
+</headertext>
+
+<entry>
+<text>
+After arriving in London, we rented a car and drove directly to The Mumbles. In Mumbles, we stayed at the Langland Road B&amp;B. On our first full day, we drove to St. Davids to see the cathedral and explore the area. We also drove down to the coast and did a short coastal walk out to St. Davids Head. Day two was spent on the Gower peninsula to the south of Mumbles. Day three we drove from the Mumbles to Colwyn Bay via Abersystwyth and Snowdonia National Park. We also stopped by Conwy. In Colwyn Bay, we stayed at the Ellingham House B&amp;B. Day four we went to Caernarfon and took the train to Porthmadog. We stopped at Bangor for dinner. On day five, we visited Bodnant gardens and LLandudno. We had dinner at The White Lion Inn, several miles outside Colwyn Bay.  It was a very quaint, old country pub several miles down a one lane road with two way traffic. Day six, we headed back to London, stopping at Shrewsbury and overnighting at Stratford-upon-Avon at Moss Cottage B&amp;B. We spend our final three days in the UK in London staying at the Wellness House B&amp;B in Cheswick.
+</text>
+<image>
+_LEFT_iframe width=_Q_425_Q_ height=_Q_350_Q_ frameborder=_Q_0_Q_ scrolling=_Q_no_Q_ marginheight=_Q_0_Q_ marginwidth=_Q_0_Q_ src=_Q_https://www.google.com/maps/embed/v1/directions?key=AIzaSyC84hrAm47ou149g1-Fmk2ezQ3oOk8rhAM&amp;origin=UK/Heathrow+Airport&amp;waypoints=UK/The+Mumbles|UK/St.+Davids|UK/The+Mumbles|UK/Aberystwyth|UK/Colwyn+Bay|UK/Caernarfon|UK/Colwyn+Bay|UK/Shrewsbury|UK/Kidderminster|UK/Stratford-upon-Avon&amp;destination=UK/Heathrow+Airport_Q_ style=_Q_color:#0000FF;text-align:left_Q__RIGHT__LEFT_/iframe_RIGHT_
+</image>
+</entry>
+
+<entry>
+<text>
+We flew from London to Iceland and overnighted in Reykjavik which gave us a good time to see the city.  After Reykjavik, we moved to the Minna-Mosfell Guesthouse in Mosfellsbaer. From Mosfellsbaer, the first day, we drove the Golden Circle, seeing Thingvillar National Park, Geysir, Gullfoss and Kerid. We also had a chance to soak in Hrunalaug natural hot spring. The following day we explored the Snaefelnes peninsula. Snaefelness has a lot of beautiful coastline and waterfalls. We cut back through a mountain pass. Our final full day, we drove along the south coast as far as Vik. We visited the black sands beach, Eyjafjallajokull glacier and Skogafoss, Gljufrafoss and Seljalandfoss waterfalls. We also soaked in another swimming pool (naturally heated) build on the side of a hill in a small town.
+</text>
+<image>
+_LEFT_iframe width=_Q_425_Q_ height=_Q_350_Q_ frameborder=_Q_0_Q_ scrolling=_Q_no_Q_ marginheight=_Q_0_Q_ marginwidth=_Q_0_Q_ src=_Q_
+https://www.google.com/maps/embed/v1/directions?
+key=AIzaSyC84hrAm47ou149g1-Fmk2ezQ3oOk8rhAM
+&amp;origin=Iceland/Keflavik+International+Airport
+&amp;waypoints=Iceland/Reykjavik|Iceland/Mosfellsbaer|Iceland/Gullfoss|Iceland/Hrunavegur|Iceland/Skalholt|Iceland/Thingvallavegur|Iceland/Mosfellsbaer|Iceland/Hellnavegur|Iceland/Snaefellsbaer|Iceland/Barnafoss|Iceland/Vik
+&amp;destination=Iceland/Reykjavik
+_Q_ style=_Q_color:#0000FF;text-align:left_Q__RIGHT__LEFT_/iframe_RIGHT_
+</image>
+</entry>
+
+</travels>

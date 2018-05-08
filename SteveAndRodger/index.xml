@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<travels>
+<index>
+<trip>
+<destination>Home</destination>
+<link>homepage.php</link>
+</trip>
+<trip>
+<destination>Coyle House Gallery</destination>
+<link>gallery.php?destination=CoyleBuild</link>
+</trip>
+<trip>
+<destination>Coyle ADU Gallery</destination>
+<link>gallery.php?destination=CoyleBuildADU</link>
+</trip>
+<trip>
+<destination>231 Coyle</destination>
+<link>destination.php?destination=Coyle</link>
+</trip>
+<trip>
+<destination>Wedding</destination>
+<link>destination.php?destination=Wedding</link>
+</trip>
+<trip>
+<destination>Kenya/Tanzania '17</destination>
+<link>destination.php?destination=KenyaTanzania17</link>
+</trip>
+<trip>
+<destination>Fiji/Australia '15</destination>
+<link>destination.php?destination=Australia15</link>
+</trip>
+<trip>
+<destination>Iceland/Wales '14</destination>
+<link>destination.php?destination=WalesIceland14</link>
+</trip>
+<trip>
+<destination>Molokai '13</destination>
+<link>destination.php?destination=Molokai13</link>
+</trip>
+<trip>
+<destination>Nicaragua '13</destination>
+<link>destination.php?destination=Nicaragua13</link>
+</trip>
+<trip>
+<destination>Greece/Italy '12</destination>
+<link>destination.php?destination=GreeceItaly12</link>
+</trip>
+<trip>
+<destination>Oahu '10</destination>
+<link>destination.php?destination=Oahu10</link>
+</trip>
+<trip>
+<destination>France '10</destination>
+<link>destination.php?destination=France10</link>
+</trip>
+<trip>
+<destination>Guatemala '09</destination>
+<link>destination.php?destination=Guatemala09</link>
+</trip>
+<trip>
+<destination>Argentina '08</destination>
+<link>destination.php?destination=Argentina08</link>
+</trip>
+<trip>
+<destination>Greece/Turkey '08</destination>
+<link>destination.php?destination=GreeceTurkey08</link>
+</trip>
+<trip>
+<destination>Merida '08</destination>
+<link>destination.php?destination=Merida08</link>
+</trip>
+<trip>
+<destination>Croatia '07</destination>
+<link>destination.php?destination=Croatia07a</link>
+</trip>
+<trip>
+<destination>Panama '06</destination>
+<link>destination.php?destination=Panama06</link>
+</trip>
+<trip>
+<destination>Sweden '05</destination>
+<link>destination.php?destination=Sweden05</link>
+</trip>
+<trip>
+<destination>Costa Rica '04</destination>
+<link>destination.php?destination=CostaRica04</link>
+</trip>
+<trip>
+<destination>Nome '04</destination>
+<link>destination.php?destination=Nome04</link>
+</trip>
+<trip>
+<destination>Scotland '04</destination>
+<link>destination.php?destination=Scotland04</link>
+</trip>
+<trip>
+<destination>Thailand/Vietnam '03</destination>
+<link>destination.php?destination=ThailandVietnam03</link>
+</trip>
+<trip>
+<destination>Arizona '02</destination>
+<link>destination.php?destination=Arizona02</link>
+</trip>
+<trip>
+<destination>Banff '02</destination>
+<link>destination.php?destination=Banff02</link>
+</trip>
+<trip>
+<destination>Other Stuff</destination>
+<link>destination.php?destination=OtherStuff</link>
+</trip>
+</index>
+</travels>

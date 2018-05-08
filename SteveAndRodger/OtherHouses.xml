@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<travels>
+<title>Port Townsend Houses</title>
+<flag>DobeStack_Left.gif</flag>
+<flag_right>DobeStack_Right.gif</flag_right>
+<headertext>
+Here are some comments on other houses around Port Townsend.
+</headertext>
+<entry>
+<text>
+Here's a house we passed along the way. Its got the very simple "box with a gable roof" style we're sort of looking for. It seems a bit too plain though. I think there are too few windows with boring trim. I'm not crazy about the different siding choices, although I think Steve likes that more than I do. 
+</text>
+<image>
+images/OtherHouse_pictures/IMG00028.jpg
+</image>
+</entry>
+
+<entry>
+<text>
+This is sort of random...but we saw this barn. I really liked it. The covered "porch" gives it the "saltbox" shape I like. It has a popup of some sort on the other side that I actually would not prefer...I'd rather have the simple gable, but the dormers are OK.
+</text>
+<image>
+images/OtherHouse_pictures/DSCN0253.JPG
+</image>
+</entry>
+
+<entry>
+<text>
+We really liked this design. It made me think some sort of a shed roof with celestory windows would be great for the ADU at Coyle. The front porch would face to the south so the celestories would catch the sun. 
+</text>
+<image>
+images/OtherHouse_pictures/DSCN0255.JPG
+</image>
+</entry>
+
+<entry>
+<text>
+This design was a bit plain for us. The siding seems indistinct. I'm also not crazy about the large series of picture windows, although I realize the view is there. I like windows with divisions of some sort in them. I'm also attracted to stronger pitch gables. This would be about a minimum for me.
+</text>
+<image>
+images/OtherHouse_pictures/DSCN0256.JPG
+</image>
+</entry>
+
+</travels>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<travels>
+<title>The Plans</title>
+<flag>DobeStack_Left.gif</flag>
+<flag_right>DobeStack_Right.gif</flag_right>
+<headertext>
+Here are some pictures of the major things we've done.
+</headertext>
+<entry>
+<text>
+February 20, 2010: Demolition of the barn.
+</text>
+<image>
+images/Coyle_pictures/BarnDemolition.JPG
+</image>
+</entry>
+
+<entry>
+<text>
+April 25, 2010: Asbestos removal from house
+</text>
+<image>
+images/Coyle_pictures/AsbestosRemoval.JPG
+</image>
+</entry>
+
+<entry>
+<text>
+June, 2010: House demolition
+</text>
+<image>
+images/Coyle_pictures/HouseDemo.JPG
+</image>
+</entry>
+
+<entry>
+<text>
+July 6, 2010: Drilling the well
+</text>
+<image>
+images/Coyle_pictures/WellDigging.JPG
+</image>
+</entry>
+
+</travels>

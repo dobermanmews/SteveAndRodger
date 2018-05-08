@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<travels>
+<title>231 Coyle</title>
+<flag>DobeStack_Left.gif</flag>
+<flag_right>DobeStack_Right.gif</flag_right>
+<headertext>
+Photos of the construction process can be found in the
+
+_LEFT_BR_RIGHT_
+Here is the timeline of major activties:
+
+_LEFT_UL_RIGHT_
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_11/09:_LEFT_/B_RIGHT_ See the property on MLS. Go to check it out
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_12/09:_LEFT_/B_RIGHT_ Due diligence to understand all the easement/buffer issues
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_01/11/10:_LEFT_/B_RIGHT_ Close on the property.
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_02/10:_LEFT_/B_RIGHT_ Barn demolition
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_02/10:_LEFT_/B_RIGHT_ Begin new house/ADU and septic design
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_04/10:_LEFT_/B_RIGHT_ Old house asbestos removal
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_04/10:_LEFT_/B_RIGHT_ Complete septic design
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_05/10:_LEFT_/B_RIGHT_ Old house demolition
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_06/10:_LEFT_/B_RIGHT_ Complete house design. Try to file permits. Find out we need to dig the well _LEFT_B_RIGHT_before_LEFT_/B_RIGHT_ submitting for permits
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_07/10:_LEFT_/B_RIGHT_ Dig well, install pump, test water.
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_07/29/10:_LEFT_/B_RIGHT_ Submit permit application
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_09/10:_LEFT_/B_RIGHT_ Waiting for permits - patience phase
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_10/10:_LEFT_/B_RIGHT_ Waiting for permits - frustration phase
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_11/10:_LEFT_/B_RIGHT_ Waiting for permits - exasperation phase
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_12/10:_LEFT_/B_RIGHT_ Waiting for permits - demanding phase
+_LEFT_LI_RIGHT_ _LEFT_B_RIGHT_01/05/11:_LEFT_/B_RIGHT_ Permits Approved!
+
+_LEFT_/UL_RIGHT_
+</headertext>
+<entry>
+<text>
+February 20, 2010: Demolition of the barn.
+</text>
+<image>
+images/Coyle_pictures/BarnDemolition.JPG
+</image>
+</entry>
+
+<entry>
+<text>
+April 25, 2010: Asbestos removal from house
+</text>
+<image>
+images/Coyle_pictures/AsbestosRemoval.JPG
+</image>
+</entry>
+
+<entry>
+<text>
+July 6, 2010: Drilling the well
+</text>
+<image>
+images/Coyle_pictures/WellDigging.JPG
+</image>
+</entry>
+<caption>Excavation</caption>
+<caption>Excavation</caption>
+<caption>Excavation</caption>
+<caption>Excavation</caption>
+<caption>Excavation</caption>
+<caption>Excavation</caption>
+<caption>Excavation</caption>
+</travels>

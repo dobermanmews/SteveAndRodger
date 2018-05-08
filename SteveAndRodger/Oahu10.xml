@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<travels>
+<title>Oahu '10</title>
+<flag>Hawaii.png</flag>
+<headertext>
+We visited Oahu in October 2010. Oahu is a the 'garden' island. It's extremely  lush.
+</headertext>
+<entry>
+<text>
+We found this monk seal sleeping on one of the beaches
+</text>
+<image>
+images/Oahu10_gallery/Oahu10_0000.jpg
+</image>
+</entry>
+<entry>
+<text>
+We hiked out to a lighthouse at one end of the island.
+</text>
+<image>
+images/Oahu10_gallery/Oahu10_0010.jpg
+</image>
+</entry>
+<entry>
+<text>
+Of course its all beautiful. It's Hawaii!
+</text>
+<image>
+images/Oahu10_gallery/Oahu10_0002.jpg
+</image>
+</entry>
+</travels>

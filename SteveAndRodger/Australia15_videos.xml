@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<travels>
+<title>Fiji/Australia '15</title>
+<flag>Fiji.png</flag>
+<flag_right>Australia.png</flag_right>
+<headertext>
+Here are some videos from Fiji and Australia
+</headertext>
+<entry>
+<text>
+Tradtional dancers in Fiji
+</text>
+<video>
+videos/Australia15_gallery/FijiDancers.mp4
+</video>
+</entry>
+<entry>
+<text>
+Green Turtle digging a nest on Heron Island
+</text>
+<video>
+videos/Australia15_gallery/GreenTurtle_1.mp4
+</video>
+</entry>
+
+<entry>
+<text>
+Green Turtle heading to the water on Heron Island (Part 1)
+</text>
+<video>
+videos/Australia15_gallery/GreenTurtle_2.mp4
+</video>
+</entry>
+<entry>
+<text>
+Green Turtle heading to the water on Heron Island (Part 2)
+</text>
+<video>
+videos/Australia15_gallery/GreenTurtle_3.mp4
+</video>
+</entry>
+<entry>
+<text>
+Green Turtle heading to the water on Heron Island (Part 3)
+</text>
+<video>
+videos/Australia15_gallery/GreenTurtle_4.mp4
+</video>
+</entry>
+<entry>
+<text>
+Green Turtle heading to the water on Heron Island (Part 4)
+</text>
+<video>
+videos/Australia15_gallery/GreenTurtle_5.mp4
+</video>
+</entry>
+</travels>

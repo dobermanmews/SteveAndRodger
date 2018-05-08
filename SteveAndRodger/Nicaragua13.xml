@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<travels>
+<title>Nicaragua '13</title>
+<flag>Nicaragua.png</flag>
+<headertext>
+We visited Nicaragua in April 2012. We spent time in three areas: Granada, Ometepe Island and San Juan del Sur.  Those three are the basic 'tourist trail' of Nicaragua, but Nicaragua is undiscovered enough that even the tourist trail isn't all that touristy.
+</headertext>
+<entry>
+<text>
+Volcanic crater near Granada
+</text>
+<image>
+images/Nicaragua13_gallery/Nicaragua13_0001.jpg
+</image>
+</entry>
+
+<entry>
+<text>
+Ometepe Island
+</text>
+<image>
+images/Nicaragua13_gallery/Nicaragua13_0027.jpg
+</image>
+</entry>
+
+<entry>
+<text>
+We ran across some monkeys on Ometepe
+</text>
+<image>
+images/Nicaragua13_gallery/Nicaragua13_0034.jpg
+</image>
+</entry>
+
+<entry>
+<text>
+The view from our B &amp; B in San Juan del Sur.
+</text>
+<image>
+images/Nicaragua13_gallery/Nicaragua13_0037.jpg
+</image>
+</entry>
+
+</travels>

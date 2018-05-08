@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<travels>
+<title>Plants and Animals</title>
+<flag>DobeStack_Left.gif</flag>
+<flag_right>DobeStack_Right.gif</flag_right>
+<headertext>
+Here's a collection of plants and animals I've identified on the property. If you see any corrections, please let me know.
+</headertext>
+
+<entry>
+<text>
+Bald eagle
+</text>
+<image>
+images/Coyle_pictures/Eagle.jpg
+</image>
+</entry>
+
+<entry>
+<text>
+Oregon grape (Mahonia aquifolium) and dwarf orgeon grape (Mahona nervosa)
+</text>
+<image>
+images/Coyle_pictures/OregonGrape.JPG
+</image>
+</entry>
+
+<entry>
+<text>
+Western sword ferns (Polystichum munitum).
+</text>
+<image>
+images/Coyle_pictures/SwordFern.JPG
+</image>
+</entry>
+
+
+<entry>
+<text>
+Coast Douglas fir (Pseudotsuga menziesii) and salal (Gaultheria shallon).
+</text>
+<image>
+images/Coyle_pictures/Salal.JPG
+</image>
+</entry>
+
+<entry>
+<text>
+Huckleberries (Vaccinium parvifolium)
+</text>
+<image>
+images/Coyle_pictures/Huckleberry.JPG
+</image>
+</entry>
+
+</travels>
