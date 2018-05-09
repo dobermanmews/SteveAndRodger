@@ -124,6 +124,57 @@ img#d01 {
    }
   }
 
+   <!-- Return my personal key from newsapi.org -->   
+   function getKey() {
+     return 'f2fa8edda4a641f9834418bffcdb7b13';
+   }
+
+   function decodeJson(page, jsonTxt) {
+      jsonObj = JSON.parse(jsonTxt);
+
+      html = "<UL>"
+      for (var i = 0; i < jsonObj.totalResults; i++) {
+       var article = jsonObj.articles[i];
+       html = html + "<LI><A href=\"" + article.url + "\">" + article.title + "</A><BR>" + article.description + "<BR>";
+      }
+      html = html + "</UL>";
+      page.innerHTML=html
+   }
+
+   function activateTabJson(pageId, url) {
+   var tabCtrl = document.getElementById('tabCtrl');
+   var pageToActivate = document.getElementById(pageId);
+   for (var i = 0; i < tabCtrl.childNodes.length; i++) {
+     var node = tabCtrl.childNodes[i];
+     if (node.nodeType == 1) { /* Element */
+       node.style.display = (node == pageToActivate) ? 'block' : 'none';
+       
+       if (node.style.display == 'none' ) {
+	   continue;
+       }
+
+       if( url == '')
+	 {
+	   continue;
+	 }
+	   var xmlhttp;
+       if (window.XMLHttpRequest)
+	 {// code for IE7+, Firefox, Chrome, Opera, Safari
+	   xmlhttp=new XMLHttpRequest();
+	 }
+       else
+	 {// code for IE6, IE5
+	   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	 }
+
+        xmlhttp.open("GET",url, false);
+        xmlhttp.send();
+        
+        decodeJson(pageToActivate, xmlhttp.responseText);
+     }
+   }
+ }
+
    function activateTab(pageId, url, isAP) {
    var tabCtrl = document.getElementById('tabCtrl');
    var pageToActivate = document.getElementById(pageId);
@@ -165,7 +216,7 @@ img#d01 {
  }
 </script>
 </head>
-<body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 204);" alink="#000099" link="#000099" vlink="#990099" onload="javascript:activateTab('ReutersTop', 'http://feeds.reuters.com/reuters/topNews', false)">
+<body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 204);" alink="#000099" link="#000099" vlink="#990099" onload="javascript:activateTabJson('ReutersTop', 'https://newsapi.org/v2/top-headlines?sources=reuters&apiKey=f2fa8edda4a641f9834418bffcdb7b13')">
 <br>
 <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
 <tbody>
@@ -199,27 +250,28 @@ img#d01 {
 <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
-<td style="width: 124px;"><a href="javascript:activateTab('ReutersTop', 'http://feeds.reuters.com/reuters/topNews', false)">Reuters: Top</a></td>
 
-<!-- hosted startss here -->
-<td style="width: 124px;"><a href="javascript:activateTab('APTop','http://hosted.ap.org/lineups/TOPHEADS.rss?SITE=AP&SECTION=HOME', true)">AP: Top</a></td> 
-<td style="width: 126px;"><a href="javascript:activateTab('APUS','http://hosted.ap.org/lineups/USHEADS.rss?SITE=AP&SECTION=HOME')">AP: US</a></td>
-<td style="width: 131px;"><a href="javascript:activateTab('APBusiness','http://hosted.ap.org/lineups/BUSINESSHEADS.rss?SITE=AP&SECTION=HOME')">AP: Business</a></td>
-<!-- hosted ends here -->
+<!-- Reuters - NewsAPI/JSON -->
+<td style="width: 124px;"><a href="javascript:activateTabJson('ReutersTop', 'https://newsapi.org/v2/top-headlines?sources=reuters&apiKey=f2fa8edda4a641f9834418bffcdb7b13')">Reuters: Top</a></td>
 
-<!-- hosted2 starts here -->
-<!--
-<td style="width: 124px;"><a href="javascript:activateTab('APTop',
-'http://hosted2.ap.org/atom/APDEFAULT/3d281c11a96b4ad082fe88aa0db04305')">AP: Top</a></td>
-<td style="width: 124px;"><a href="javascript:activateTab('APTop','http://hosted.ap.org/lineups/TOPHEADS-rss_2.0.xml?SITE=SCAND&SECTION=HOME', true)">AP: Top</a></td> 
-<td style="width: 126px;"><a href="javascript:activateTab('APUS','http://hosted.ap.org/lineups/USHEADS-rss_2.0.xml?SITE=SCAND&SECTION=HOME', true)">AP: US</a></td>
-<td style="width: 131px;"><a href="javascript:activateTab('APBusiness','http://hosted.ap.org/lineups/BUSINESSHEADS-rss_2.0.xml?SITE=SCAND&SECTION=HOME', true)">AP: Business</a></td>
--->
-<!-- hosted2 ends here -->
+<!-- AP - NewsAPI/JSON -->
+<td style="width: 124px;"><a href="javascript:activateTabJson('APTop','https://newsapi.org/v2/top-headlines?sources=associated-press&apiKey=f2fa8edda4a641f9834418bffcdb7b13')">AP: Top</a></td>
 
+<!-- BBC - NewsAPI/JSON -->
+<td style="width: 126px;"><a href="javascript:activateTabJson('BBC','https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=f2fa8edda4a641f9834418bffcdb7b13')">BBC</a></td>
+
+<!-- CNBC - NewsAPI/JSON -->
+<td style="width: 131px;"><a href="javascript:activateTabJson('CNBC','https://newsapi.org/v2/top-headlines?sources=cnbc&apiKey=f2fa8edda4a641f9834418bffcdb7b13')">CNBC</a></td>
+
+<!-- Seattle Times - RSS/XML -->
 <td style="width: 129px;"><a href="javascript:activateTab('SeattleTimes','http://seattletimes.com/rss/localnews.xml', false)">Seattle Times</a></td>
+
+<!-- Seattle Weather - Weather Underground - XML -->
 <td style="width: 130px;"><a href="javascript:parseWU('WSeattle','http://api.wunderground.com/api/dae42962448a162b/forecast10day/q/98105.xml')">Weather:Seattle</a></td>
+
+<!-- Quilecene Weather - Weather Underground - XML -->
 <td style="width: 130px;"><a href="javascript:parseWU('WQuilcene','http://api.wunderground.com/api/dae42962448a162b/forecast10day/q/98376.xml')">Weather:Dabob</a></td>
+
 </tr>
 </tbody>
 </table>
@@ -233,9 +285,9 @@ Loading...
 </div>
 <div id="APTop" style="display: none;">
 </div>
-<div id="APUS" style="display: none;">
+<div id="BBC" style="display: none;">
 </div>
-<div id="APBusiness" style="display: none;">
+<div id="CNBC" style="display: none;">
 </div>
 <div id="SeattleTimes" style="display: none;" >
 </div>
@@ -248,4 +300,5 @@ Loading...
 </tr>
 </tbody>
 </table>
+Headlines powered by <A href='http://newsapi.org'>NewsAPI.org</A>
 </body></html>
