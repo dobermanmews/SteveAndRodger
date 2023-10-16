@@ -1,291 +1,213 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
-<meta http-equiv="content-type" content="text/html;charset=UTF-8"><title>My Homepage</title>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <title>My Homepage</title>
 
-<style>
-table#t01 tr:nth-child(even) {
-     background-color: rgb(214, 214, 214);
-}
-table#t01 tr:nth-child(odd) {
-     background-color: rgb(204, 204, 204);
-}
-
-span#w01 {
-     font-size: 18px;
-     font-weight: bold;
-     margin-left: 30px;
-}
-
-img#d01 {
-     vertical-align: -8px;
-}
-</style>
-
-<script type="text/javascript">
-
-function parseWU(pageId, url) {
-  var tabCtrl = document.getElementById('tabCtrl');
-  var pageToActivate = document.getElementById(pageId);
-  for (var i = 0; i < tabCtrl.childNodes.length; i++) {
-    var node = tabCtrl.childNodes[i];
-    if (node.nodeType == 1) { /* Element */
-
-      node.style.display = (node == pageToActivate) ? 'block' : 'none';
-
-      if( node.id == 'WSeattle' ) {
-        var d = node.style.display;
-      }
-
-      if (node.style.display == 'none' ) {
-        continue;
-      }
-
-      if( url == '')
-        {
-          continue;
+    <style>
+        table#t01 tr:nth-child(even) {
+            background-color: rgb(214, 214, 214);
         }
 
-      var xmlhttp;
-      if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-      }
-      else {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-
-      xmlhttp.open("GET",url, false);
-      xmlhttp.send();
-
-      var xmlDoc;
-      if( window.DOMParser ) {
-        var parser = new DOMParser();
-        xmlDoc = parser.parseFromString(xmlhttp.responseText, "text/xml");
-      }
-      else {
-        xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-        xmlDoc.async = false;
-        xmlDoc.loadXML(xmlhttp.responseText);
-      }
-      
-      var txtfc = xmlDoc.getElementsByTagName("txt_forecast")[0];
-
-      var fdays = txtfc.getElementsByTagName("forecastday");
-
-      var simfc = xmlDoc.getElementsByTagName("simpleforecast")[0];
-
-      var ddays = simfc.getElementsByTagName("forecastday");
-
-      var html = "<IMG src=\"wundergroundLogo_4c_horz.png\" width=\"137\" height=\"32\" id=\"d01\"/>";
-      html +=  "<span id=\"w01\">" + pageId.substring(1) + "</span>";
-       
-      html = html + "<TABLE id=\"t01\">";
-
-      for (var j = 0; j < fdays.length; j++) {
-        html = html + "<TR>";
-
-        var title = fdays[j].getElementsByTagName('title')[0].childNodes[0].nodeValue;
-        html = html + "<TD>" + title + "</TD>";
-
-        var date = new Date();
-        var n = Math.floor(j/2);
-        date.setDate(date.getDate()+n);
-       
-        html = html + "<TD>" + (date.getMonth()+1) + "/" + date.getDate() + "</TD>";
-
-        var icon = fdays[j].getElementsByTagName('icon_url')[0].childNodes[0].nodeValue;
-        html = html + "<TD><IMAGE src=\"" + icon + "\" width=\"32\" height=\"32\"></TD>";
-
-        var high = ddays[n].getElementsByTagName('high')[0].getElementsByTagName('fahrenheit')[0].childNodes[0].nodeValue;
-        var low = ddays[n].getElementsByTagName('low')[0].getElementsByTagName('fahrenheit')[0].childNodes[0].nodeValue;
-        if( n == j/2 ) {
-          html = html + "<TD style=\"text-indent:5px\">" + high + "/" + low + "   </TD>";
+        table#t01 tr:nth-child(odd) {
+            background-color: rgb(204, 204, 204);
         }
-        else {
-          html = html + "<TD style=\"text-indent:5px\">   </TD>";
+
+        span#w01 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 30px;
         }
-        var fctdata = fdays[j].getElementsByTagName('fcttext')[0];
-        var fcttext = fctdata.childNodes[0].data;
-        html = html + "<TD style=\"text-indent:5px\">" + fcttext + "</TD>";
 
-
-        html = html + "</TR>";
-      }
-
-      html = html + "</TABLE>";
-
-      html = html + "<P>Data provided by Weather Underground. Weather Underground is a registered trademark of The Weather Channel, LLC. both in the United States and internationally. The Weather Underground Logo is a trademark of Weather Underground, LLC.";
-
-      pageToActivate.innerHTML = html;
-    }
-  }
-  }
-
-function decodeJson(page, jsonTxt) {
-  jsonObj = JSON.parse(jsonTxt);
-  
-  html = "<UL>";
-  for (var i = 0; i < jsonObj.totalResults; i++) {
-    var article = jsonObj.articles[i];
-    html = html + "<LI><A href=\"" + article.url + "\">" + article.title + "</A><BR>" + article.description + "<BR>";
-  }
-  html = html + "</UL>";
-  page.innerHTML=html;
-}
-
-function activateTabJson(pageId, url) {
-  var API_KEY = 'f2fa8edda4a641f9834418bffcdb7b13';
-  url = url.replace('API_KEY', API_KEY);
-     
-  var tabCtrl = document.getElementById('tabCtrl');
-  var pageToActivate = document.getElementById(pageId);
-  for (var i = 0; i < tabCtrl.childNodes.length; i++) {
-    var node = tabCtrl.childNodes[i];
-    if (node.nodeType == 1) { /* Element */
-      node.style.display = (node == pageToActivate) ? 'block' : 'none';
-         
-      if (node.style.display == 'none' ) {
-        continue;
-      }
-         
-      if( url == '')
-        {
-          continue;
+        img#d01 {
+            vertical-align: -8px;
         }
-      var xmlhttp;
-      if (window.XMLHttpRequest)
-        {// code for IE7+, Firefox, Chrome, Opera, Safari
-          xmlhttp=new XMLHttpRequest();
+ 
+    </style>
+
+    <script type="text/javascript">
+        var pageToActivate;
+        var proxy = "https://cors-anywhere.herokuapp.com/";
+        var rss2json = "https://api.rss2json.com/v1/api.json?rss_url=";
+
+       function xmlLoadCallback() {
+            decodeXmlJson(pageToActivate, this.responseText);
         }
-      else
-        {// code for IE6, IE5
-          xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+
+        function decodeXmlJson(page, jsonTxt) {
+            jsonObj = JSON.parse(jsonTxt);
+
+            html = "<UL>";
+            for (var i = 0; i < jsonObj.items.length; i++) {
+                var article = jsonObj.items[i];
+				var desc = article.description.replace(/<img[^]*?>/g, "");
+                desc = desc.replace(/<\/?p>/g,"")
+                html = html + "<LI><A href=\"" + article.link + "\">" + article.title + "</A><BR>" + desc + "<BR>";
+            }
+            html = html + "</UL>";
+            page.innerHTML = html;
         }
-         
-      xmlhttp.open("GET",url, false);
-      xmlhttp.send();
-         
-      decodeJson(pageToActivate, xmlhttp.responseText);
-    }
-  }
-}
 
-function activateTab(pageId, url) {
-  var tabCtrl = document.getElementById('tabCtrl');
-  var pageToActivate = document.getElementById(pageId);
-  for (var i = 0; i < tabCtrl.childNodes.length; i++) {
-    var node = tabCtrl.childNodes[i];
-    if (node.nodeType == 1) { /* Element */
-      node.style.display = (node == pageToActivate) ? 'block' : 'none';
-       
-      if (node.style.display == 'none' ) {
-        continue;
-      }
+        function loadWeather() {
+            decodeWeather(pageToActivate, this.responseText);
+        }
 
-      if( url == '') {
-          continue;
-      }
+         function decodeWeather(page, jsonTxt) {
+            jsonObj = JSON.parse(jsonTxt);
 
-      var xmlhttp;
-      if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-          xmlhttp=new XMLHttpRequest();
-      }
-      else {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
+             html = "<TABLE>";
+             for (var i = 0; i < jsonObj.properties.periods.length; i++) {
+                 var period = jsonObj.properties.periods[i];
+                 dt = new Date(period.startTime);
+                 html = html + "<TR><TD>" + (dt.getMonth()+1) + "/" + dt.getDate() + "</TD>";
+                 html = html + "<TD>" + period.name + "</TD>";
+                 html = html + "<TD style=\"text-align:left\">Temp: " + period.temperature + "</TD>";
+                 html = html + "<TD>" + period.shortForecast + "</TD></TR>";
+                 html = html + "<TR><TD colspan =\"4\">" + period.detailedForecast + "</TD></TR>";
+                 html = html + "<TR><TD colspan = \"4\">---</TD></TR>";
+            }
+            html = html + "</TABLE>";
+            page.innerHTML = html;
+        }
 
-      xmlhttp.open("GET","RSS.php?url="+url, false);
-      xmlhttp.send();
-        
-      pageToActivate.innerHTML=xmlhttp.responseText;
-    }
-  }
-}
-</script>
+        function activateWeather(pageId, url) {
+
+            var tabCtrl = document.getElementById('tabCtrl');
+            pageToActivate = document.getElementById(pageId);
+            for (var i = 0; i < tabCtrl.childNodes.length; i++) {
+                var node = tabCtrl.childNodes[i];
+                if (node.nodeType == 1) { /* Element */
+                    node.style.display = (node == pageToActivate) ? 'block' : 'none';
+
+                    if (node.style.display == 'none') {
+                        continue;
+                    }
+
+                    if (url == '') {
+                        continue;
+                    }
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.addEventListener("load", loadWeather);
+                    xmlhttp.open("GET", url);
+                    xmlhttp.send();
+                }
+            }
+        }
+
+
+        function activateTab(pageId, url) {
+            var tabCtrl = document.getElementById('tabCtrl');
+            pageToActivate = document.getElementById(pageId);
+            for (var i = 0; i < tabCtrl.childNodes.length; i++) {
+                var node = tabCtrl.childNodes[i];
+                if (node.nodeType == 1) { /* Element */
+                    node.style.display = (node == pageToActivate) ? 'block' : 'none';
+
+                    if (node.style.display == 'none') {
+                        continue;
+                    }
+
+                    if (url == '') {
+                        continue;
+                    }
+
+                    var xmlhttp = new XMLHttpRequest();
+
+                    xmlhttp.addEventListener("load", xmlLoadCallback);
+                    xmlhttp.open("GET", rss2json + url);
+                    xmlhttp.send();
+                }
+            }
+        }
+    </script>
 
 </head>
-<body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 204);" alink="#000099" link="#000099" vlink="#990099" onload="javascript:activateTabJson('ReutersTop', 'https://newsapi.org/v2/top-headlines?sources=reuters&apiKey=API_KEY')">
-<br>
-<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td>
-<div><a href="http://mail.yahoo.com/">Yahoo Mail</a></div>
-<div><a href="http://finance.yahoo.com/">Yahoo Finance</a></div>
-<div><a href="http://gmail.google.com/">GMail</a></div>
-<div><a href="http://www.dailykos.com">Kos</a></div>
-</td>
-<td><!-- Search Google -->
-<form method="get" action="http://www.google.com/search"><input name="ie" value="UTF-8" type="hidden"><input name="oe" value="UTF-8" type="hidden">
-<table style="width: 100%; height: 63px;">
-<tbody>
-<tr>
-<td style="text-align: left;"><input name="q" size="80" maxlength="255" value="" type="text"><input name="btnG" value="Google Search" type="submit"></td>
-</tr>
-</tbody>
-</table>
-</form>
-</td>
-<td>
-</td>
-</tr>
-</tbody>
-</table>
-<table style="text-align: left; width: 100%; height: 138px;" border="1" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td style="width: 829px;">
-<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
+<body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 204);" alink="#000099" link="#000099" vlink="#990099" onload="javascript:activateTab('CBCTop', 'https://cbc.ca/cmlink/rss-world')">
+<!-- 'http://feeds.reuters.com/Reuters/worldNews')"> -->
+    <br>
+    <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+            <tr>
+                <td>
+                    <div><a href="http://mail.yahoo.com/">Yahoo Mail</a></div>
+                    <div><a href="http://finance.yahoo.com/">Yahoo Finance</a></div>
+                    <div><a href="http://gmail.google.com/">GMail</a></div>
+                    <div><a href="http://www.dailykos.com">Kos</a></div>
+                </td>
+                <td>
+                    <!-- Search Google -->
+                    <form method="get" action="http://www.google.com/search">
+                        <input name="ie" value="UTF-8" type="hidden"><input name="oe" value="UTF-8" type="hidden">
+                        <table style="width: 100%; height: 63px;">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: left;"><input name="q" size="80" maxlength="255" value="" type="text"><input name="btnG" value="Google Search" type="submit"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="text-align: left; width: 100%; height: 138px;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+            <tr>
+                <td style="width: 829px;">
+                    <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+                        <tbody>
+                            <tr>
 
-<!-- Reuters - NewsAPI/JSON -->
-<td style="width: 124px;"><a href="javascript:activateTabJson('ReutersTop', 'https://newsapi.org/v2/top-headlines?sources=reuters&apiKey=API_KEY')">Reuters</a></td>
+                                <!-- CBC - NewsAPI/JSON -->
+                                <td style="width: 124px;"><a href="javascript:activateTab('CBCTop', 'https://cbc.ca/cmlink/rss-world')">CBC</a></td>
 
-<!-- AP - NewsAPI/JSON -->
-<td style="width: 124px;"><a href="javascript:activateTabJson('APTop','https://newsapi.org/v2/top-headlines?sources=associated-press&apiKey=API_KEY')">AP</a></td>
+                                <!-- AP - NewsAPI/JSON -->
+                                <td style="width: 124px;"><a href="javascript:activateTab('RTP','https://www.rtp.pt/noticias/rss')">RTP</a></td>
 
-<!-- BBC - NewsAPI/JSON -->
-<td style="width: 126px;"><a href="javascript:activateTabJson('BBC','https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=API_KEY')">BBC</a></td>
+                                <!-- BBC - NewsAPI/JSON -->
+                                <td style="width: 126px;"><a href="javascript:activateTab('BBC','https://feeds.bbci.co.uk/news/world/rss.xml')">BBC</a></td>
 
-<!-- CNBC - NewsAPI/JSON -->
-<td style="width: 131px;"><a href="javascript:activateTabJson('CNBC','https://newsapi.org/v2/top-headlines?sources=cnbc&apiKey=API_KEY')">CNBC</a></td>
+                                <!-- CNBC - NewsAPI/JSON -->
+                                <td style="width: 131px;"><a href="javascript:activateTab('CNBC','https://www.cnbc.com/id/100727362/device/rss/rss.html')">CNBC</a></td>
 
-<!-- Seattle Times - RSS/XML -->
-<td style="width: 129px;"><a href="javascript:activateTab('SeattleTimes','https://www.seattletimes.com/seattle-news/feed/', false)">Seattle Times</a></td>
+                                <!-- Seattle Times - RSS/XML 
+                                <td style="width: 129px;"><a href="javascript:activateTab('SeattleTimes','https://www.seattletimes.com/seattle-news/feed/', false)">Seattle Times</a></td>
 
-<!-- Seattle Weather - Weather Underground - XML -->
-<td style="width: 130px;"><a href="javascript:parseWU('WSeattle','http://api.wunderground.com/api/dae42962448a162b/forecast10day/q/98105.xml')">Weather:Seattle</a></td>
+                                Seattle Weather - Weather Underground - XML 
+                                <td style="width: 130px;"><a href="javascript:activateWeather('WSeattle','https://api.weather.gov/gridpoints/SEW/124,69/forecast')">Weather:Seattle</a></td>
 
-<!-- Quilecene Weather - Weather Underground - XML -->
-<td style="width: 130px;"><a href="javascript:parseWU('WQuilcene','http://api.wunderground.com/api/dae42962448a162b/forecast10day/q/98376.xml')">Weather:Dabob</a></td>
-
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr>
-<td>
-<div id="tabCtrl">
-<div id="ReutersTop" style="display: block;">
-Loading...
-</div>
-<div id="APTop" style="display: none;">
-</div>
-<div id="BBC" style="display: none;">
-</div>
-<div id="CNBC" style="display: none;">
-</div>
-<div id="SeattleTimes" style="display: none;" >
-</div>
-<div id="WQuilcene" style="display: none;">
-</div>
-<div id="WSeattle" style="display: none;">
-</div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-Headlines powered by <A href='http://newsapi.org'>NewsAPI.org</A>
-</body></html>
+                                Quilecene Weather - Weather Underground - XML
+                                <td style="width: 130px;"><a href="javascript:activateWeather('WQuilcene','https://api.weather.gov/gridpoints/SEW/111,82/forecast')">Weather:Dabob</a></td>
+								-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="tabCtrl">
+                        <div id="CBCTop" style="display: block;">
+                            Loading...
+                        </div>
+                        <div id="RTP" style="display: none;">
+                        </div>
+                        <div id="BBC" style="display: none;">
+                        </div>
+                        <div id="CNBC" style="display: none;">
+                        </div>
+                        <div id="SeattleTimes" style="display: none;">
+                        </div>
+                        <div id="WQuilcene" style="display: none;">
+                        </div>
+                        <div id="WSeattle" style="display: none;">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
